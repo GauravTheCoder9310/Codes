@@ -88,22 +88,29 @@ button {
   </div>
 
 </div>
-
 <script>
 function addAsset() {
-  document.getElementById("assets").innerHTML += `
-    <div class="row">
-      <input placeholder="Item">
-      <input type="number" placeholder="Amount">
-    </div>`;
+  const row = document.createElement("div");
+  row.className = "row";
+
+  row.innerHTML = `
+    <input placeholder="Item">
+    <input type="number" placeholder="Amount">
+  `;
+
+  document.getElementById("assets").appendChild(row);
 }
 
 function addLiability() {
-  document.getElementById("liabilities").innerHTML += `
-    <div class="row">
-      <input placeholder="Item">
-      <input type="number" placeholder="Amount">
-    </div>`;
+  const row = document.createElement("div");
+  row.className = "row";
+
+  row.innerHTML = `
+    <input placeholder="Item">
+    <input type="number" placeholder="Amount">
+  `;
+
+  document.getElementById("liabilities").appendChild(row);
 }
 
 function calculate() {
